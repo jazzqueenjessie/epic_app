@@ -1,4 +1,11 @@
 EpicApp::Application.routes.draw do
+  get "static_pages/home"
+  get "static_pages/arranging"
+  get "static_pages/studio"
+  get "static_pages/directing"
+  get "static_pages/blog"
+  get "static_pages/premiere"
+  get "static_pages/contact"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
