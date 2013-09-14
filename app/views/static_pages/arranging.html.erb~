@@ -1,0 +1,10 @@
+<% provide(:title, 'Arranging') %>
+<h1>A Cappella Arranging</h1>
+<br>
+<h2 align="left">Custom Arrangments</h2>
+<br>
+<p align="left" class="spaced">Find me in app/views/static_pages/arranging.html.erb</p>
+<br>
+<br>
+<h2 align="left">Arrangments Library</h2>
+<p class="spaced" align="left"></p>

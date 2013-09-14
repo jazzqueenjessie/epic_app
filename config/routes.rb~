@@ -1,6 +1,7 @@
 EpicApp::Application.routes.draw do
   root 'static_pages#home'
-  math '/arranging',  to: 'static_pages#arranging', via: 'get'
+  match '/',          to: 'static_pages#home',      via: 'get'
+  match '/arranging', to: 'static_pages#arranging', via: 'get'
   match '/studio',    to: 'static_pages#studio',    via: 'get'
   match '/directing', to: 'static_pages#directing', via: 'get'
   match '/blog',      to: 'static_pages#blog',      via: 'get'

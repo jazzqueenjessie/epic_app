@@ -1,10 +1,11 @@
 EpicApp::Application.routes.draw do
   root 'static_pages#home'
+  match '/',          to: 'static_pages#home',      via: 'get'
   match '/arranging', to: 'static_pages#arranging', via: 'get'
   match '/studio',    to: 'static_pages#studio',    via: 'get'
   match '/directing', to: 'static_pages#directing', via: 'get'
   match '/blog',      to: 'static_pages#blog',      via: 'get'
-  match '/premiere',  to: 'static_pages#premiere',  via: 'get'
+  match '/about',  to: 'static_pages#about',  via: 'get'
   match '/contact',   to: 'static_pages#contact',   via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
