@@ -1,0 +1,15 @@
+require 'spec_helper'
+
+describe "StaticPages" do
+
+  subject { page }
+
+  describe "Home page" do
+  
+    it "should have the content 'Epic'" do
+      before { visit root_path }
+      expect(page).to have_content('Epic')
+    end
+   
+  end
+end

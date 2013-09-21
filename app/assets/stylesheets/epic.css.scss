@@ -11,6 +11,8 @@
 }
 
 /*universal*/
+@import "bootstrap";
+
 html { overflow-y: scroll; }
 section { overflow: auto; }
 textarea {  resize: vertical; }
@@ -87,4 +89,45 @@ body {
 }
 
 #right-panel {
+}
+
+/* forms */
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  //@include box_sizing($boxmodel);
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+
+
+/*DEBUG BOX*/
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  //@include box_sizing($boxmodel);
+}
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
