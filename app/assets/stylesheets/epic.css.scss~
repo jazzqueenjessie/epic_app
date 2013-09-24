@@ -1,17 +1,17 @@
 /*FONTS*/
 @font-face {
     font-family: 'Broadway';
-    src: url('BroadwayFontKit/broadway-webfont.eot');
-    src: url('BroadwayFontKit/broadway-webfont.eot?#iefix') format('embedded-opentype'),
-         url('BroadwayFontKit/broadway-webfont.woff') format('woff'),
-         url('BroadwayFontKit/broadway-webfont.ttf') format('truetype'),
-         url('BroadwayFontKit/broadway-webfont.svg#broadway') format('svg');
+    src: url('fonts/BroadwayFontKit/broadway-webfont.eot');
+    src: url('fonts/BroadwayFontKit/broadway-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BroadwayFontKit/broadway-webfont.woff') format('woff'),
+         url('fonts/BroadwayFontKit/broadway-webfont.ttf') format('truetype'),
+         url('fonts/BroadwayFontKit/broadway-webfont.svg#broadway') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 /*universal*/
-@import "bootstrap";
+//@import "bootstrap";
 
 html { overflow-y: scroll; }
 section { overflow: auto; }
@@ -68,6 +68,7 @@ body {
   margin-top: 150px;
   min-width:760px;
   background-image: url(metal021.jpg);
+  background-color: #FF0000;
   /*background-image: url(metal002.jpg);
   background-image: url(metal025.jpg);*/
 /*
@@ -91,30 +92,44 @@ body {
 #right-panel {
 }
 
+
+/*DEBUG BOX*/
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing();
+}
+
+
 /* forms */
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
-  @include box_sizing($boxmodel);
+  @include box_sizing();
 }
 
 input {
   height: auto !important;
 }
 
-
-/*DEBUG BOX*/
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing($boxmodel);
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
 }
 
-@mixin box_sizing {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
 }

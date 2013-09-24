@@ -21,17 +21,21 @@ textarea {  resize: vertical; }
 $myOrange: #FF8000;
 p { line-height: 20px; }
 
-ol { list-style-position: inside;
-     list-style-type: decimal; }
+ol { list-style-position: inside; list-style-type: decimal; }
 ol li { line-height: 1.2; }
 
 table td, table th { padding:10px; }
 
+h1 { line-height: normal; font-family: Georgia; font-size: 2em; margin: .67em 0 }
+h2 { line-height: normal; font-family: Georgia; font-size: 1.5em; margin: .75em 0 }
+h3 { line-height: normal; font-family: Georgia; font-size: 1.17em; margin: .83em 0 }
+
+
 /*TOP FLOATING NAVIGATION PANEL*/
 
 #header {
-position:fixed; top:0; left:0; width: 100%; height:25px;  
-color: #aaaaaa; padding-left:0px; margin-left:0px; min-width: 1180px;
+position:fixed; top:0; left:0; width: 100%;
+color: #aaaaaa; padding-top: 20px; padding-bottom: 20px; padding-left:0px; margin-left:0px; min-width: 1180px;
 
 /* Adds shadow to the bottom of the bar */
 -webkit-box-shadow: 0px 0px 8px 0px #000000;
@@ -42,9 +46,9 @@ box-shadow: 0px 0px 8px 0px #000000;
 background-color: rgba(1, 1, 1, 0.8); color: rgba(1, 1, 1, 0.8);
 }
 
-#navigation a { font-size:20px; padding-left:10px; padding-right:10px; color:white; text-decoration:none; align: right; font-family: Broadway}
+#navigation a { font-size:20px; padding-top: 10px; padding-left:10px; padding-right:10px; color:white; text-decoration:none; align: right; font-family: Broadway; }
 
-#navigation  a:hover { color: $myOrange; width:100%; } 
+#navigation a:hover { color: $myOrange; width:100%; } 
 
 #logo {
   font-family: Broadway;
@@ -68,14 +72,17 @@ body {
   margin-top: 150px;
   min-width:760px;
   background-image: url(metal021.jpg);
-  /*background-image: url(metal002.jpg);
-  background-image: url(metal025.jpg);*/
-/*
+  
+  /*
   background-image: url(mountain.jpg);
   background-repeat: no-repeat;
   background-position: 0px 65px;
-  background-attachment: fixed;*/
+  background-attachment: fixed;
+ */
+  
 }
+
+
 
 #main {  
   padding-top: 40px;
@@ -85,23 +92,16 @@ body {
   background-color: white; opacity:0.9;
 }
 
-#left-panel {
-}
-
-#right-panel {
-}
-
 /* forms */
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
-  //@include box_sizing($boxmodel);
+  @include box_sizing(0);//I guessed 0 for parameter
 }
 
-input {
-  height: auto !important;
-}
+input { height: auto !important; }
+
 
 #error_explanation {
   color: #f00;
@@ -117,13 +117,13 @@ input {
 }
 
 
-/*DEBUG BOX*/
+/*DEBUG BOX */
 .debug_dump {
   clear: both;
   float: left;
   width: 100%;
   margin-top: 45px;
-  //@include box_sizing($boxmodel);
+  @include box_sizing(0);//I guessed 0 for parameter
 }
 
 @mixin box_sizing {
