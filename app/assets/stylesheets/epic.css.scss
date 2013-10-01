@@ -1,15 +1,4 @@
-/*FONTS*/
-/*
-@font-face {
-    font-family: 'Broadway';
-    src: url('BroadwayFontKit/broadway-webfont.eot');
-    src: url('BroadwayFontKit/broadway-webfont.eot?#iefix') format('embedded-opentype'),
-         url('BroadwayFontKit/broadway-webfont.woff') format('woff'),
-         url('BroadwayFontKit/broadway-webfont.ttf') format('truetype'),
-         url('BroadwayFontKit/broadway-webfont.svg#broadway') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}*/
+/*FONTS* moved to bottom*/
 
 /*universal*/
 @import "bootstrap";
@@ -72,7 +61,7 @@ background-color: rgba(1, 1, 1, 0.8); color: rgba(1, 1, 1, 0.8);
 body {
   margin-top: 150px;
   min-width:760px;
-  background-image: url(metal021.jpg);
+  background-image: url(image-path('metal021.jpg'));
   
   /*
   background-image: url(mountain.jpg);
